@@ -1,4 +1,4 @@
-from ADT import List
+from linked_list import List
 from node import Node
 
 def main() -> None:
