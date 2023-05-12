@@ -1,8 +1,12 @@
 from linked_list import List
 from node import Node
+import random
 
-def main() -> None:
-    elements_list: list[int] = [12,321,43,43,12,54,123,3412,334,543,-2,23,54]
+def main(size: int) -> None:
+    elements_list: list[int] = list()
+    for i in range(size):
+        elements_list.append(random.randint(1, 100))
+    
     list1: List = List()
     list2: List = List()
     node: Node
@@ -18,29 +22,27 @@ def main() -> None:
         
     print("Elements added, now will be displayed")
     list1.print_list()
-    
-    """print("Remove the duplicates of the list")
-    
-    purge_repeated(list1)
-    
-    list1.print_list()"""
+    while 1:
+        try:
+            temp = int(input("Give a number to find if in the linked list: "))
+            break
+        except ValueError as e:
+            print("Introduce an integer please")
+
+    print(f"Is {temp} in the linked list? --> return value: {list1.search_item(temp)}")
 
     print("Elements will be added to list2")
     node = list2.first_item()
+    random.shuffle(elements_list)
     for element in elements_list:
         list2.insert_item(element, node)
         node = list2.next_item(node)
 
-    """print(f"Now the two list will be concatinated --> return value: {list1.add_list(list2)}")
+    list2.print_list()
     
-    
-    list1.print_list()"""
-    
-    print(f"List1 will be cleared --> return value: {list1.clear_list()}")
-    print(f"List1 will be destroyed --> return value: {list1.destroy()}")
-    
-    print(f"List2 will be cleared --> return value: {list2.clear_list()}")
-    print(f"List2 will be destroyed --> return value: {list2.destroy()}")
+    print(list1.add_list(list2))
+
+    print(id(list1.last_node.next))
     
 def purge_repeated(list: List):
     node: Node
@@ -57,4 +59,11 @@ def purge_repeated(list: List):
         node = list.next_item(node)    
         
 if __name__ == '__main__':
-    main()
+    while 1:
+        try:
+            size = int(input("How many objects do you want in the linked list? "))
+            break
+        except ValueError as e:
+            print("You don't introduce a valid value")
+    
+    main(size)
