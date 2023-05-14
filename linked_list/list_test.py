@@ -1,5 +1,5 @@
 from linked_list import List
-from node import Node
+from Node import Node
 import random
 
 def main(size: int) -> None:
@@ -41,8 +41,6 @@ def main(size: int) -> None:
     list2.print_list()
     
     print(list1.add_list(list2))
-
-    print(id(list1.last_node.next))
     
 def purge_repeated(list: List):
     node: Node

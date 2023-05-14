@@ -1,5 +1,5 @@
 from Stack import Stack
-from node import Node
+from Node import Node
 import random
 
 def main(size: int) -> None:

@@ -1,5 +1,5 @@
 import copy
-from node import Node
+from Node import Node
 from typing import Union
 
 
