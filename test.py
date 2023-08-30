@@ -1,5 +1,5 @@
 from stack.Stack import Stack
-from queue.queue import Queue
+from cola.queue import Queue
 
 def symbol_balance(exp: str = None) -> bool:
     """
