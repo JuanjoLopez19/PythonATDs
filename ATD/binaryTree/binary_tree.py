@@ -1,11 +1,10 @@
 
-from Node import TreeNode
+from ATD.binaryTree.Node import TreeNode
 class BinaryTree:
     def __init__(self, value) -> None:
         self.root: TreeNode = TreeNode(value)
     
-    @staticmethod
-    def  insert(self, value) -> int:
+    def  insert(self, value:str) -> int:
         if self.root is None:
             self.root = TreeNode(value)
             return 0

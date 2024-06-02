@@ -1,5 +1,5 @@
 import copy
-from Node import Node
+from ATD.linked_list.node import Node
 from typing import Union
 
 
@@ -9,9 +9,9 @@ class List:
         self.last_node: Node = None
 
     def createEmpty(self) -> None:
-        self.root: Node = Node(-1)
-        self.last_node: Node = Node(-1)
-        self.root.next: Node = None
+        self.root = Node(-1)
+        self.last_node= Node(-1)
+        self.root.next = None
         return 0
 
     def isEmpty(self) -> int:

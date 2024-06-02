@@ -1,26 +1,25 @@
-from queue import Queue
-from Node import Node
+from ATD.stack.Stack import Stack
 import random
 
 def main(size: int) -> None:
     elements_list: list[int] = list()
     for i in range(size):
         elements_list.append(random.randint(1, 100))
-    qeue = Queue()
+    stack = Stack()
     
     for temp in elements_list:
-        qeue.push(temp)
+        stack.push(temp)
     
-    print(qeue)
-    while not qeue.isEmpty():
-        print(f"Value extracted: {qeue.pop()}")
+    print(stack)
+    while not stack.isEmpty():
+        print(f"Value extracted: {stack.pop()}")
     
-    print(f"Now the queue is empty --> return value {qeue.isEmpty()}")
-    print(f"Stack --> {qeue}")
+    print(f"Now the stack is empty --> return value {stack.isEmpty()}")
+    print(f"Stack --> {stack}")
 if __name__ == '__main__':
     while 1:
         try:
-            size = int(input("How many objects do you want in the queue? "))
+            size = int(input("How many objects do you want in the stack? "))
             break
         except ValueError as e:
             print("You don't introduce a valid value")

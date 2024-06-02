@@ -1,4 +1,4 @@
-from Node import Node
+from ATD.qeue.Node import Node
 class Queue:
     def __init__(self) -> None:
         self.head: Node = None

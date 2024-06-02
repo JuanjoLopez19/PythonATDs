@@ -1,5 +1,5 @@
 from typing import Literal
-from node import Node
+from ATD.stack.node import Node
 
 class Stack:
     def __init__(self) -> None:

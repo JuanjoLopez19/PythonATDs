@@ -1,5 +1,5 @@
-from linked_list import List
-from Node import Node
+from ATD.linked_list.node import Node
+from ATD.linked_list.linked_list import List
 import random
 
 def main(size: int) -> None:

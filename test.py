@@ -1,5 +1,6 @@
-from stack.Stack import Stack
-from cola.queue import Queue
+
+from ATD.stack.Stack import Stack
+from ATD.qeue.queue import Queue
 
 def symbol_balance(exp: str = None) -> bool:
     """

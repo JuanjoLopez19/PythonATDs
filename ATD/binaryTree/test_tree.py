@@ -1,4 +1,4 @@
-from binary_tree import BinaryTree
+from ATD.binaryTree.binary_tree import BinaryTree
 aux: BinaryTree = BinaryTree("a")
 
 aux.insert("b")
@@ -8,5 +8,8 @@ aux.insert("e")
 aux.insert("f")
 aux.insert("g")
 
-aux.inOrder(aux.root)
 
+
+
+if __name__ == '__main__':
+    aux.inOrder(aux.root)
